@@ -11,12 +11,12 @@ Your task is to build web APIs that understanding text inputs and trigger pre-de
 
 
 ### Data Source:
-- **Invoices Data**: [invoices-attelas.json](https://attelasstorageoutlookdev.blob.core.windows.net/codetest/invoices-attelas.json)
-- **Clients Data**: [clients-attelas.json](https://attelasstorageoutlookdev.blob.core.windows.net/codetest/clients-attelas.json)
+- **Invoices Data**: [invoices-attelas.json](https://github.com/attelas-ai/Take-home-test-backend/blob/main/invoices-attelas.json)
+- **Clients Data**: [clients-attelas.json](https://github.com/attelas-ai/Take-home-test-backend/blob/main/clients-attelas.json)
 
 ### Test Data:
 
-- **Test Data**: [test-attelas.json](https://attelasstorageoutlookdev.blob.core.windows.net/codetest/invoices-attelas.json)
+- **Test Data**: [testdata-attelas.json](https://github.com/attelas-ai/Take-home-test-backend/blob/main/testdata-attelas.json)
 
 
 ## Things We value
