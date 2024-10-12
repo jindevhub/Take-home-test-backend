@@ -28,7 +28,7 @@ Your task is to build web APIs that understanding text inputs and trigger pre-de
 
 - Containerise the app
 - Add security measures and authentication
-- Be createtive, extend additional workflows or accomplish anything interesting with LLM in the accounting/finance space, you can find (you can take inspiration from some of the use cases at [Attelas.ai](https://attelas.ai)).
+- Be createtive, extend additional workflows or accomplish anything interesting with LLM in the accounting/finance space, (you can take inspiration from some of the use cases at [Attelas.ai](https://attelas.ai)).
 
 
 ## Submission 
