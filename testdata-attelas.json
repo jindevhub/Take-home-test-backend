@@ -3,7 +3,7 @@
         "text": "Can you provide the status of invoice INV-1020?"
     },
     {
-        "text": "When is the lastest invoice is due for Acme Corp"
+        "text": "Do we have any invoices due for Acme Corp"
     },
     {
         "text": "What's the current status of INV-1003? I can't find it in the system."
