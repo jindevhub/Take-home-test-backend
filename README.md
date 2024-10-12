@@ -5,9 +5,9 @@ This project involves building web APIs that understanding text inputs and trigg
 ## Task Overview
 
 Your task is to build web APIs that understanding text inputs and trigger pre-defined workflows. With this exercise, you will build a Web API to provide that information. The workflow includes blow
-•	Invoice status inquiry – the workflow should return the correct status of the invoice((Paid, Pending, Overdue))
-•	New Invoice submission – add a new invoice in the storage (lineItems and due date can be empty)
-•	Client information inquiry – should return the correct company information
+-	**Invoice status inquiry**: should return the correct status of the invoice((Paid, Pending, Overdue))
+- **New Invoice submission**: add a new invoice in the storage (lineItems and due date can be empty)
+- **Client information inquiry**: should return the correct company information
 
 
 ### Data Source:
