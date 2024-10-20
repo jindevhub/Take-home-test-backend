@@ -19,4 +19,5 @@ WORKDIR /app
 COPY --from=build /app/Take-home-test-backend/out ./
 # Expose port 5000
 EXPOSE 5000
+ENV ASPNETCORE_URLS=http://*:5000
 ENTRYPOINT ["dotnet", "Take-home-test-backend.dll"]
