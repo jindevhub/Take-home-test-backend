@@ -49,3 +49,5 @@ This project is a .NET 8 backend application that provides REST APIs for managin
 
 1. Run the Docker container:
    docker run -d -p 5000:5000 --name take-home-test-backend take-home-test-backend:latest
+2. Call Restapi, example:
+   curl localhost:5000/api/invoices
