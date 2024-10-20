@@ -17,4 +17,6 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/Take-home-test-backend/out ./
+# Expose port 5000
+EXPOSE 5000
 ENTRYPOINT ["dotnet", "Take-home-test-backend.dll"]
