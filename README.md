@@ -1,37 +1,51 @@
-# Backend Engineer Coding Challenge
+# Take-home Test Backend
 
-This project involves building RESTful web APIs that can understand text inputs and trigger predefined workflows.
+This project is a .NET 8 backend application that provides REST APIs for managing invoices. The application is dockerized for easy deployment.
 
-## Task Overview
+## REST APIs
 
-Your task is to build RESTful web APIs that process text inputs and trigger predefined workflows. The workflows include the following:
+### Get Invoice by Invoice Number
 
-- **Invoice Status Enquiry**: Should return the correct status of the invoice (Paid, Pending, Overdue).
-- **New Invoice Submission**: Adds a new invoice to the storage (line items and the due date can be empty).
-- **Client Information Enquiry**: Should return the correct company information.
+- **Endpoint**: `GET /api/invoices/{invoiceNumber}`
+- **Description**: Retrieves an invoice by its invoice number.
+- **Response**:
+  - `200 OK`: Returns the invoice details.
+  - `404 Not Found`: If the invoice does not exist.
 
-### Data Sources
+### Get Invoices
 
-These are the seed data sources and can be served using a solution of your choice (API, database, in-memory storage):
+- **Endpoint**: `GET /api/invoices`
+- **Description**: Retrieves all invoices or filters invoices by client name.
+- **Query Parameters**:
+  - `name` (optional): The name of the client to filter invoices.
+- **Response**:
+  - `200 OK`: Returns a list of invoices.
+  - `404 Not Found`: If no matching invoices are found.
 
-- **Invoices Data**: [invoices-attelas.json](https://github.com/attelas-ai/Take-home-test-backend/blob/main/invoices-attelas.json)
-- **Clients Data**: [clients-attelas.json](https://github.com/attelas-ai/Take-home-test-backend/blob/main/clients-attelas.json)
+### Add Invoice
 
-### Sample Text Inputs
+- **Endpoint**: `POST /api/invoices`
+- **Description**: Adds a new invoice.
+- **Request Body**: 
+  { "InvoiceNumber": "string", "ClientId": "string", "DueDate": "DateTime", "Status": "string", "LineItems": [ { "Description": "string", "Quantity": "int", "Price": "decimal" } ] }
+- **Response**:
+    - `201 Created`: Returns the created invoice.
+    - `400 Bad Request`: If the request body is invalid.
 
-- **Test Data**: [testdata-attelas.json](https://github.com/attelas-ai/Take-home-test-backend/blob/main/testdata-attelas.json)
+## Running the Application with Docker
 
-## Things We Value
+### Prerequisites
 
-- Clean and well-structured code
-- Testing
+- Docker installed on your machine.
 
-## Stretch Goals
+### Building the Docker Image
 
-- Containerise the application
-- Add security measures and authentication
-- Be creative! Try to extend additional workflows or implement interesting functionalities using LLMs in the accounting/finance space (you can take inspiration from some use cases at [Attelas.ai](https://attelas.ai)).
+1. Navigate to the directory containing the `Dockerfile`.
 
-## Submission
+2. Build the Docker image:
+   docker build -t take-home-test-backend:latest -f Dockerfile .
 
-Please submit a link to a GitHub repository with your solution, including a brief `README.md` file explaining how to run the project.
+### Running the Docker Container
+
+1. Run the Docker container:
+   docker run -d -p 5000:5000 --name take-home-test-backend take-home-test-backend:latest
